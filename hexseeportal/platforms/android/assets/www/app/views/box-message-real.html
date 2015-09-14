@@ -1,0 +1,29 @@
+<div class="Box-ChatRealTime threadmessage" ng-show="loadedThread">
+    <div class="main-bg-real image-main">
+        <div class="main-content-real">
+            <div class="message-real-SrollBar">
+                <ul >
+                        <li class="you-message-real" ng-repeat="message in messages" ng-class="{'me-message-real': message.author == authData.uid}" on-last-repeat="loaded()">
+                            <div class="box-group-user-real">
+                                <div class="box-avartar-user-real image-main"></div>
+                                <a class="box-hidden-avatar" href="javascript:void(0)">
+                                    <span user-avatar uid="message.author" width="47"></span>
+                                </a>
+                            </div>
+                            <div class="box-tet-message-user-real">
+                                <div class="name-message-real"><span user-name uid="message.author"></span></div>
+                                <div class="text-invoker-real">{{message.content}}</div>
+                            </div>
+                        </li>
+
+                </ul>
+            </div>
+            <div class="inputChat-Real">
+                <div class="box-enter-chat">
+                    <input type="text"  name="message" ng-model="message" ng-keydown="inputMessage($event)" placeholder="Type a message here" />
+                </div>
+                <button id="enter-message-chat" ng-model="message" ng-click="sendMesssageReal()" class="image-main"></button>
+            </div>
+        </div>
+    </div>
+</div>

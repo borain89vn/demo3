@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Hexsee Mobile</string>
+    <string name="launcher_name">@string/app_name</string>
+    <string name="activity_name">@string/launcher_name</string>
+    <string name="appId">mrDfvMvUIBud6lFymIwAiYOjCuVvVwTtDqN7Vxfo</string>
+    <string name="clientId">NRIgKZggwbgUji6wvaS1CR6BRUGTOnyPMlxqsejy</string>
+    <string name="ok">Ok</string>
+</resources>

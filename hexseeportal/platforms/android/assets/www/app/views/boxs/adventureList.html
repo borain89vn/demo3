@@ -1,0 +1,77 @@
+<!--box-new-adventure-->
+<div id="box-new-adventure" class="boxs" style="display: none">
+    <div class="header-box">
+        <span>Adventure</span>
+    </div>
+    <div class="box-adventure-child">
+        <div class="box-borders">
+            <div class="header-adbox">
+                <div class="box-f fl">New invite</div>
+                <div class="box-leader fl">Leader</div>
+                <div class="box-detail fl">Details</div>
+            </div>
+            <div class="scoll-box-ad added-list" style="height:190px">
+
+                <div class="text-center load-message-empty" ng-show="number_list_addedAdventure == 0">No adventure</div>
+
+                <div class="div-boxxx repeat-animation" ng-repeat="adventure in list_addedAdventure">
+                    <div class="contenx-adven">
+                        <div class="tex-center">
+                            <div class="xs-text">{{adventure.name}}</div>
+<!--                        <div class="icon-next image-main" ng-click="eventGotoaAdventure(adventure)"></div>-->
+							<a href="#/journal/{{adventure.id}}"><div class="icon-next image-main"></div></a>
+                        </div>
+                    </div>
+                    <div class="xs-leader">
+                        <div class="xs-1">
+                            <div class="avatar-message image-main"></div>
+                            <div class="avatar-user-message">
+                                <span user-avatar uid="adventure.leader" width="45"></span>
+                            </div>
+                        </div>
+                        <div class="xs-2" user-name uid="adventure.leader"></div>
+                    </div>
+                    <div class="icon-adven">
+                        <a href="javascript:void(0)" ng-click="show_detail_adventure(adventure)" class="image-main"></a>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="header-adbox border-tops">
+                <div class="box-f fl">Current Adventures</div>
+                <div class="box-leader fl">Leader</div>
+                <div class="box-detail fl">Details</div>
+            </div>
+            <div class="scoll-box-ad joined-list" style="height:180px">
+                <div class="text-center" ng-show="number_list_joinedAdventure == 0">No adventure</div>
+
+                <div class="div-boxxx" ng-repeat="adventure in list_joinedAdventure">
+                    <div class="contenx-adven">
+                        <div class="tex-center">
+                            <div class="xs-text">{{adventure.name}}</div>
+<!--                            <div class="icon-next image-main" ng-click="eventGotoaAdventure(adventure)"></div>-->
+							<a href="#/journal/{{adventure.id}}"><div class="icon-next image-main"></div></a>
+							
+                        </div>
+                    </div>
+                    <div class="xs-leader">
+                        <div class="xs-1">
+                            <div class="avatar-message image-main"></div>
+                            <div class="avatar-user-message">
+                                <span user-avatar uid="adventure.leader" width="45"></span>
+                            </div>
+                        </div>
+                        <div class="xs-2" user-name uid="adventure.leader"></div>
+                    </div>
+                    <div class="icon-adven"><a href="javascript:void(0)" ng-click="show_detail_adventure(adventure)" class="image-main"></a></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="bt-add-new-adven">
+            <a href="javascript:void(0)" class="image-main" ng-click="openFriendBox()">Create Adventure</a>
+        </div>
+    </div>
+    <div class="tooltip-arrow image-main"></div>
+    <a href="javascript:void(0)" ng-click="boxHTML()" class="lose-button image-main"></a>
+</div>

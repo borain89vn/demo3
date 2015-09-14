@@ -1,0 +1,83 @@
+<html>
+
+<head>
+	<title>Hexsee Portal</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,height=device-height">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline' *; media-src *; connect-src *; script-src 'self' 'unsafe-inline'  'unsafe-eval'">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="css/flexslider.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style_desk.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/device.css">
+    <script src="cordova.js"></script>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/hammer.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/jquery-mousewheel.js"></script>
+	<script src="js/jquery.mCustomScrollbar.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/jquery.bpopup.min.js"></script>
+	<script src="js/angular/angular.min.js"></script>
+	<script src="js/angular/angular-touch.min.js"></script>
+	<script src="js/angular/angular-route.min.js"></script>
+	<script src="js/angular/angular-animate.min.js"></script>
+	<script src="js/angular/angular-sanitize.min.js"></script>
+	<script src="js/angular.hammer.min.js"></script>
+	<script src="js/gestures.js"></script>
+	<script src="js/binaryajax.js"></script>
+	<script src="js/exif.js"></script>
+	<script src="js/canvasResize.js"></script>
+	<script src="js/socket.io.js"></script>
+	<script src="js/transfer-io.js"></script>
+	<script src="js/bootbox.js"></script>
+	<script src="app/funcs.js"></script>
+	<script src="app/app-config.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/router.js"></script>
+	<script src="app/controller/RootController.js"></script>
+	<script src="app/controller/LoginController.js"></script>
+	<script src="app/controller/RegisterController.js"></script>
+	<script src="app/controller/JournalController.js"></script>
+	<script src="app/directive/userAvatar.js"></script>
+	<script src="app/directive/privateSearch.js"></script>
+	<script src="app/directive/lostPassword.js"></script>
+	<script src="app/directive/adventureDetail.js"></script>
+	<script src="app/directive/userName.js"></script>
+	<script src="app/directive/userStatus.js"></script>
+	<script src="app/directive/notificationAdventure.js"></script>
+	<script src="app/directive/notificationMessage.js"></script>
+	<script src="app/directive/quickReplyMessageBox.js"></script>
+	<script src="app/directive/inputBoxReply.js"></script>
+	<script src="app/directive/threadMessage.js"></script>
+	<script src="app/directive/threadMessagePortal.js"></script>
+	<script src="app/directive/sendNewMessage.js"></script>
+	<script src="app/directive/onLastRepeat.js"></script>
+
+	<script src="js/jquery-frame.js"></script>
+
+</head>
+
+<body class="IsDevice">
+	<div id="HexseeApplication" class="HexseeApplication" ng-controller="RootController">
+		<div id="main_view" ng-view></div>
+	</div>
+	<div id="loading">
+		<img src="images/loading-image.gif" />
+        <noscript>Oops! Your browser seems to have javascript disabled. Make sure javascript are enabled or try opening a new browser window.</noscript>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+<div id="box-new-adventure-detail" class="boxs" ng-init="flag=false">
+    <div class="header-box">
+        <span>Adventure details</span>
+    </div>
+    <div class="box-adventure-child">
+        <div style=" font-size: 18px;margin-bottom: 10px;">
+            <div class="floaf-s" style="color:#ff9f20">{{adventure.name}}</div>
+            <div class="floaf-s" tyle="color:#ff9f20">Leader : <b><span user-name uid="adventure.leader"></span></b></div>
+        </div>
+        <div class="box-borders">
+
+            <div class="header-adbox">
+                <div class="box-f fl">Invitees</div>
+                <div class="box-detail fl">Location</div>
+            </div>
+            <div class="scoll-box-ad" style="height: 250px;">
+                <div class="div-boxxx" ng-repeat="member in members">
+                    <div class="contenx-adven">
+                        <div class="tex-center fl" user-name uid="member.uid"></div>
+                    </div>
+                    <div class="icon-adven"><a href="javascript:void(0)" ng-click="gotoCurrentPageOfMember(member)">{{member.current_page != '' ? member.current_page : 'No location'}}</a></div>
+                </div>
+                <div class="div-boxxx" ng-repeat="email in invitedEmailMembers">
+                    <div class="contenx-adven">
+                        <div class="tex-center">{{email}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bt-add-new-adven">
+            <a href="javascript:void(0)" class="image-main" ng-click="joinAdventure(adventure)"></a>
+        </div>
+
+    </div>
+    <div class="tooltip-arrow image-main"></div>
+    <a href="javascript:void(0)" ng-click="close_detail_adventure()"  class="lose-button close-button-x-detail image-main"></a>
+</div>

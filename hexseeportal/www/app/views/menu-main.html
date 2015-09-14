@@ -1,0 +1,76 @@
+
+<div id="MainContainer">
+
+     <div class="hideWhenDevice" ng-repeat="notification in notifications_addedAdventure " notification-adventure notification="notification"></div>
+
+    <div ng-repeat="adventure in adventure_detail_list" adventure-detail adventure="adventure" class="boxAdventureDetail"></div>
+    
+    <div ng-repeat="message_detail in messageDetail" message-detail message="message" class="boxMessageDetail"></div>
+
+    <div id="main-login-adventure" class="hide-device">
+        <a class="logo-toll " data-rel="preference" href="javascript:void(0)" ng-click="boxHTML(true,'box-preferences');">
+            <span class="icon-xcloser image-main"></span>
+            <div class="image-logo image-main" ></div>
+        </a>
+        <div class="line-adven image-main remove-margin-left"></div>
+        <div class="the-button-friends  fl" >
+            <a id="button-friends" href="javascript:void(0)" ng-click="boxHTML(true,'friendList')">
+                <div class="friend-ship image-main"></div>
+                <div class="count-friend-ship image-main ng-hide">4</div>
+                <div class="text-center textf">Invite</div>
+            </a>
+        </div>
+        <div class="line-adven image-main fl remove-margin-left"></div>
+        <div class="the-button-adv  fl" data-rel='adventureList' >
+            <a id="button-adv" href="javascript:void(0)" ng-click="boxHTML(true,'adventureList')">
+                <div class="adv-ship image-main"></div>
+               <div class="count-adv-ship count-added-adv-ship image-main" ng-hide="number_list_addedAdventure == 0">{{number_list_addedAdventure <= 9 ? number_list_addedAdventure : '+' }}</div>
+                <div class="count-adv-ship image-main" ng-hide="number_notifications_addedAdventure == 0">{{number_notifications_addedAdventure <= 9? number_notifications_addedAdventure : '+'}}</div>
+                <div class="text-center textf">Adventures</div>
+            </a>
+        </div>
+        <div class="image-main fl remove-margin-left"></div>
+        <div class="fl">
+            <span class="image-main bestAE">
+                <div class="rtt">{{current_adventure_name}}</div>
+            </span>
+        </div>
+        <div class="line-adven image-main fl remove-margin-left"></div>
+        <div class="the-button-message  fl" data-rel='messageList'>
+            <a id="button-message" href="javascript:void(0)" ng-click="boxHTML(true,'messageList')">
+                <div class="message-ship image-main"></div>
+                <div class="count-message-ship image-main" ng-hide="number_notifications_receivedMessage == 0 ">{{number_notifications_receivedMessage <= 9 ? number_notifications_receivedMessage : '+'}}</div>
+                <div class="text-center textf">Journal</div>
+            </a>
+        </div>
+         <div class="box-search-private">
+            <div class="div-bor image-main">
+                <input private-search id="search-private" placeholder="Private search" type="text" private-search/>
+            </div>
+        </div> 
+        <div class="fl how-are-you-div" ng-hide="number_notification_message == 0" ng-repeat="notification in notifications_receivedMessage" notification-message notification="notification"></div>
+    </div>
+
+
+
+    <div ng-include="boxURL" class="boxToolbar"></div>
+    <div ng-repeat="messageNotification in willReplyMessageNotification" uid="{{idUser}}" quick-reply-message-box notification="messageNotification" firstname="{{userData.firstname}}" lastname="{{userData.lastname}}"></div>
+
+    <!--<button btn-add-message-thread>Add Message Thread</button>-->
+    <div class="image-main arrow-right"></div>                   
+</div>
+
+<div ng-include="'app/views/timeline.html'"></div>
+<div id="ngIncludeBox" class="boxToolbar" ng-include=boxR></div> 
+ <div ng-repeat="messageNotification in willReplyMessageNotification" uid="{{idUser}}" quick-reply-message-box notification="messageNotification" firstname="{{firstNUser}}" lastname="{{lastNUser}}"></div>
+<div ng-include="'app/views/logout.html'"></div>
+<div ng-include="'app/views/change-password.html'"></div>
+<div ng-include="'app/views/edit-profile.html'"></div>
+<div ng-include="'app/views/edit-avatar.html'"></div>
+
+			
+<div class="HexseeApplication-devices">
+	<div ng-include="'app/views/device/device_main_time.html'"></div>
+    <div ng-include="'app/views/device/show_alert.html'"></div>
+    <div ng-include="'app/views/device/device_main_menu.html'"></div>
+</div>

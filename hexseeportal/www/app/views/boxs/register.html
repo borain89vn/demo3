@@ -1,0 +1,82 @@
+<div id="form-main-register" class="form-main-register clear boxs" style="display: none" ng-controller="RegisterController">
+            <div class="header-box">
+                <span>Registration</span>
+            </div>
+            <form autocomplete="off" name="MyFormRegister" >
+                <div class="box-s">
+                    <div class="group-box">
+                        <div class="input-div image-main">
+                            <input  type="email" name="email" ng-model="user.email" placeholder="Email" required/>
+                        </div>
+                        <div class="input-div image-main">
+                            <input type="firstname" name="firstname" ng-minlength="3" ng-maxlength="12" ng-model="user.firstname" placeholder="First Name" required/>
+                        </div>
+                        <div class="input-div image-main">
+                            <input type="lastname" name="lastname" ng-minlength="3" ng-maxlength="12" ng-model="user.lastname" placeholder="Last Name" required/>
+                        </div>
+                        <div class="input-div image-main">
+                            <input type="password" name="password" ng-minlength="6"  ng-model="user.password" placeholder="Password" required/>
+                        </div>
+                        <div class="input-div image-main">
+                            <input type="password" name="againpassword" ng-minlength="6" ng-model="user.againpassword" placeholder="Confirm password" required/>
+                            <input type="hidden" value="111" id="user_avatar_regis" name="avatar_url" ng-model="user.avatar_url"/>
+                        </div>
+                    </div>
+                    <div class="clear">
+                        <div class="text-avatar">Add avatar</div>
+                        <div class="box-avatar-new">
+                            <a href="javascript:void(0)" class="">
+                                <input type="file" name="avatar_regisUser" ng-click="uploadAvatar()" id="input-file-avatar" />
+
+                            </a>
+                            <div class="hexagon-avatar image-main"></div>
+                            <div class="icon-upload-avatar image-main"></div>
+                            <div class="image-avatar-upload">
+                                <img id="load_image_avatar"  width="71" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear div-hexagon-color">
+                        <div class="xdd">Hexagon color</div>
+                        <div class="list-hexagon-color">
+                            <ul>
+                                <li ng-repeat="listHexacolor in listHexacolors">
+                                    <a href="javascript:void(0)"  ng-click="myColor(listHexacolor.color,listHexacolor.order)" ng-style="{'background-color':'#'+listHexacolor.color}">
+                                        <span class="image-main color-hex-{{listHexacolor.color}}"></span>
+                                    </a> 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="term-register">
+                        <input type="checkbox" ng-model="user.term_condition" name="term_condition" />
+                        <div class="text-term">
+                            I accept all license conditions <a href="javascript:void(0)" ng-click="openEula()">Click here</a> to view license conditions
+                        </div>
+                    </div>
+
+
+                    <div class="mess-gc">
+                        <div class="messager_Regis"></div>
+                    </div>    
+                    <div class="button-ok-res">
+                        <a href="javascript:void(0)" ng-click="checkForm()" class="image-main"></a>   
+                    </div>
+                    <div class="main-social-register ng-hide">
+                        <div class="line-social">
+                            <div class="image-main"></div>
+                        </div>
+                        <div class="face-res">
+                                <a class="image-main" href="javascript:void(0)" loginface></a>
+                            </div>
+                        <div class="clear">
+                            <div class="twitt-res">
+                                <a class="image-main" href="javascript:void(0)"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tooltip-arrow image-main"></div>
+                    <a href="javascript:void(0)" ng-click="boxHTML()" class="lose-button image-main"></a>
+                </div>
+            </form>
+        </div>

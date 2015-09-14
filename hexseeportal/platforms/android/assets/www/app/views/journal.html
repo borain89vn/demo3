@@ -1,0 +1,22 @@
+
+<div id="container-adventure" class="container rma setTopCOntainer">
+    <ul class="list clear">
+        <li class="boder-bottom-adv animate-repeat" ng-class="{{classloadList}}" ng-repeat="journal in listJournal">
+            <a class="a-loop" href="javascript:void(0)">
+
+                <div class="col-md-10 col-sm-10 col-xs-10 rml">
+                    <div class="name-adv">{{journal.name}}</div>
+                    <div user-avatar uid="journal.leader" width="45"></div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 icon-arrow text-right rmr">
+                    <div class="parent">
+                        <div class="child">
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<div ng-include="'app/views/menu-main.html'"></div>

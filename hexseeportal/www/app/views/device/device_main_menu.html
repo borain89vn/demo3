@@ -1,0 +1,83 @@
+<div id="mainbar" class="">
+	<div ng-repeat="notification in notifications_addedAdventure " notification-adventure notification="notification"></div>
+	<div class="createNewMessageDevice" ng-show="ResultAdventureJounrnalDevice.messages.length==0">
+		<div send-new-message></div>
+	</div>
+	<div class="menu-main container">
+		<div class="col-md-3 col-sm-3 col-xs-3">
+			<a href="javascript:void(0)" ng-click="boxHTML(true,'box-preferences');">
+				<img id="login_main" src="images/logo.png" />
+			</a>
+		</div>
+		<div class="col-md-3 col-sm-3 col-xs-3">
+			<a id="invite-menu" ng-click="boxHTML(true,'friendList')" href="javascript:void(0)">
+				<div class="text-center"><img src="images/icon-1.png" />
+				</div>
+				<div class="text-center txt">Invite</div>
+			</a>
+		</div>
+		<div class="col-md-3 col-sm-3 col-xs-3 sp-text-menu">
+			<a id="adventures-menu" href="javascript:void(0)" ng-click="boxHTML(true,'adventureList')">
+				<div class="text-center"><img src="images/icon-2.png" />
+				</div>
+				<div class="count-added-adv-ship image-main" ng-hide="number_list_addedAdventure == 0">
+					{{number_list_addedAdventure
+					<=9 ? number_list_addedAdventure : '+' }} <div style="background-color:#E8182C;width:10px;height:4px;position:absolute;bottom:1px;left:6px"></div>
+		</div>
+		<div class="count-adv-ship image-main" ng-hide="number_notifications_addedAdventure == 0">{{number_notifications_addedAdventure
+			<=9 ? number_notifications_addedAdventure : '+'}}</div>
+				<div class="absolute txt">
+					<div style="text-center">Adventures</div>
+				</div>
+				</a>
+		</div>
+		<div class="col-md-3 col-sm-3 col-xs-3 sp-text-menu">
+			<a id="journal-menu" href="javascript:void(0)" ng-click="boxHTML(true,'messageList')">
+				<div class="text-center"><img src="images/icon-3.png" />
+				</div>
+				<div class="count-message-ship image-main" ng-hide="number_notifications_receivedMessage == 0 ">{{number_notifications_receivedMessage
+					<=9 ? number_notifications_receivedMessage : '+'}}</div>
+						<div class="absolute txt">
+							<div style="text-center">Journal</div>
+						</div>
+			</a>
+			</div>
+		</div>
+		<div class="menu-second container">
+			<div class="col-md-6 col-sm-6 col-xs-6">
+				<div class="left-ar">
+					<img src="images/a-left.png" />
+				</div>
+				<div class="mid-ar">
+					<div class="fl how-are-you-div" ng-hide="number_notification_message == 0" ng-repeat="notification in notifications_receivedMessage" notification-message notification="notification"></div>
+				</div>
+				<div class="right-ar">
+					<img src="images/a-right.png" />
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6">
+				<div class="left-ar1">
+					<img src="images/a-left-1.png" />
+				</div>
+				<div class="mid-ar1">
+					<input id="search-private" private-search placeholder="Private search" type="text" />
+				</div>
+				<div class="right-ar1">
+					<img src="images/a-right-1.png" />
+				</div>
+			</div>
+			<div class="col-md-12 col-sm-12 col-xs-12 top-menu-currentAd">
+				<div class="left-ar1">
+					<img src="images/a-left-1.png" />
+				</div>
+				<div class="mid-ar1 menu-current-adventure">
+					<div class="text-center setmartop">{{current_adventure.name}}</div>
+				</div>
+				<div class="right-ar1">
+					<img src="images/a-right-1.png" />
+				</div>
+			</div>
+		</div>
+
+	</div>
+	

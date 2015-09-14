@@ -1,0 +1,33 @@
+<div id="maintop">
+    <div class="title container">Invite</div>
+    <a href="javascript:void(0)" class="icon-invite-facebook">
+        <img src="images/bt_in_fb.png" />
+    </a>
+</div>
+<div id="invite-main" class="container rma setTopCOntainer">
+    <ul class="ul">
+        <li class="border-bottom animate-repeat" ng-repeat="(key,value) in listFriends">
+            <a href="javascript:void(0)">
+                <div class="col-xs-10 col-md-10 col-sm-10 idp " user-avatar-fi uid="key" width="43"></div>  
+                <div class="input-invi col-xs-2 col-md-2 col-sm-2">
+                    <input type="checkbox" />
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div class="boxnewInvi container">
+        <textarea id="new-invi-title">
+
+        </textarea>
+        <div id="souf">
+            <div class="col-md-6 col-sm-6 col-xs-6 rma">
+                <button class="add-aventure-inv"></button>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6 rma text-right">
+                <button class="start-aventure-inv"></button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div ng-include="'app/views/menu-main.html'"></div>

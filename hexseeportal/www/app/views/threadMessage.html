@@ -1,0 +1,15 @@
+<div ng-show="loadedThread" class="contentThread">
+    <div class="box-tet-message-user-real">
+        <div class="name-message-real"></div>
+        <div class="text-invoker-real">{{firstmessage.content}}</div>
+        <div class="image-main icon-reply" ng-click="clickReply()"></div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="group-chat-inter message-real-SrollBar">
+        <ul>
+            <li ng-repeat="message in messages" ng-class="{new_message: message.new}"><div class="span-1"><span user-name uid="message.author"></span>  :</div> <div class="span-2">{{message.content}}</div></li>
+        </ul>
+    </div>
+
+</div>
+

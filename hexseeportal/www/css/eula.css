@@ -1,0 +1,15 @@
+/*
+ * Developer : Daniel Wheeler <daniel@groupsurfing.com>
+ * Date : 11/2/2013
+ * All code (c)2013 Groupsurfing inc. all rights reserved
+ */
+
+body {
+   margin: 80px 0 80px 0;
+   background: #f5f5f5 url("../images/light_noise_diagonal.png") 0 0 repeat;
+   background-attachment: fixed;
+}
+
+.page-header {
+   border-bottom: 2px dotted #333;
+}

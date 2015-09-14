@@ -1,0 +1,60 @@
+<!--box-new-group-friends-->
+<div id="box-new-group-friends" class="boxs"  style="display: none">
+    <div class="header-box">
+        <span>Friends</span>
+    </div>
+    <div class="box-message-child">
+        <div class="box-borders group-normal-friends" style="height:296px">
+            <div class="header-adbox">
+                <div class="box-f fl">Friends</div>
+                <div class="box-detail fl">Invite</div>
+            </div>
+            <div>
+                <div class="scoll-box-ad" style="height:246px">
+                    <div class="div-boxxx" ng-repeat="friend in friendList track by $index">
+                        <div class="contenx-adven" >
+                            <div class="relavei">
+                                <div user-status uid="friend.fid" class="avatar-message image-main offline-user"></div>
+                                <div class="avatar-user-message ">
+                                    <span user-avatar uid="friend.fid" width="45"></span>
+                                </div>
+                                <div class="tex-center" user-name uid="friend.fid"></div>
+                            </div>
+                        </div>
+                        <div class="icon-adven">
+                            <input type="checkbox" ng-model="invitedFriends[friend.fid]" ng-disabled="oldInvitedFriends[friend.fid]" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="mewew-pren">
+            <div id="datIV-1">
+                <div id="popover-invite-email" class="popover ng-isolate-scope top fade in" style="top: 312px;left: 26px;display: none;width: 800px;">
+                    <div class="arrow"></div>
+                    <div class="popover-inner">
+                        <div class="popover-content">You can use “,” comma-separated email addresses for multiple invite.</div>
+                    </div>
+                </div>
+                <input type="text" id="input-text-invited-emails" ng-model="dataInvitedEmail.emails" ng-keyup="keyupEmailField($event)" ng-keyDown="keydownEmailField($event)" ng-focus="showPopover(true)" ng-blur="showPopover(false)" placeholder="New friend email(s)"/>
+            </div>
+            <div  id="datIV-2">
+                <input type="checkbox" ng-model="dataInvitedEmail.confirmInviteEmail"  />
+            </div>
+        </div>
+        <div class="bt-add-new-adven">
+            <button class="button-start-adventure image-main" ng-click="eventStartAdventure()">Start Adventure</button>
+        </div>
+        <div class="ol-MaN">
+            <textarea ng-model="initialAdventure.name"></textarea>
+        </div>
+        <div class="div-inviteFace ng-hide">
+            <a class="image-main" href="javascript:void(0)"></a>
+        </div>
+
+    </div>
+    <div class="tooltip-arrow image-main"></div>
+    <a href="javascript:void(0)" ng-click="boxHTML()"  class="lose-button image-main"></a>
+</div>

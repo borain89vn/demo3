@@ -1,0 +1,27 @@
+<div id="EditAvatar"  class="boxs-two">
+    <div id="box-change-avatar" class="popup">
+        <div class="header-box">
+            <span>Change Avatar</span>
+        </div>
+        <div class="insex-leesin">
+            <div class="user-edit-Avatar">
+                <div class="image-main bg-avata-edit-hidden"></div>
+                <img id="load-image-edit" src="" />
+            </div>
+        </div>
+        <div class="box-s">
+            <br/>
+
+            <input type="file" ng-click="eventChangeAvatar()" name="avatar_editUser" id="edit-avatar-user" />
+            <div class="text">
+                <span class="plus">+</span> Upload photo
+            </div>
+        </div>
+        <div class="part-button hidewhenCLickboxOthers">
+            <button ng-click="closebpopup()" class="cancel-button gray-button">Cancel</button>
+            <button class="change-button yes-button blue-button">Yes</button>
+        </div>
+
+        <a href="javascript:void(0)" ng-click="closebpopup()" class="lose-button image-main"></a>
+    </div>
+</div>

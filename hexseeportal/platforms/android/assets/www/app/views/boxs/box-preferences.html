@@ -1,0 +1,32 @@
+<!--box-preferences-->
+<div id="box-preferences" class="boxs" data-boolean=false  style="display: none">
+    <div class="header-box">
+        <span>Preferences</span>
+    </div>
+   
+    <div class="box-avatar-pre">
+        <div class="res-et"><div class="avatar-p image-main"></div></div>
+        <div class="avatar-i">
+           <span user-avatar uid="idUser" width="70" ></span> 
+        </div>
+        <div id="afterEditName" class="name-text" user-name uid="idUser"></div>
+        <a href="javascript:void(0)" class="image-main edit-avatar" ng-click="OpenBox('EditAvatar')"></a> 
+        <a href="javascript:void(0)" class="image-main icon-edit-tmp" ng-click="OpenBox('EditYourName')"></a>
+    </div>
+    <div class="content-prv">
+        <span class="s1">Email</span>
+        <span class="s2">{{emailUser}}</span>
+    </div>
+    <div class="change-password-prv">
+        <div class="s3">
+            Change password
+        </div>
+        <a href="javascript:void(0)" class="edit-pass image-main" ng-click="OpenBox('ChangePassword')"></a>
+    </div>
+    <div class="but-prev-sb">
+        <div class="s3">Logout</div>
+        <a href="javascript:void(0)" ng-click="OpenBox('MyLogOut')" class="log-out-ioncs image-main"></a>
+    </div>
+    <div class="tooltip-arrow image-main"></div>
+    <a href="javascript:void(0)" ng-click="boxHTML()" class="lose-button image-main"></a>
+</div>

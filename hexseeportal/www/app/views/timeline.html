@@ -1,0 +1,77 @@
+<div id="TimeLine">
+	<div class="container">
+		<span></span>
+		<!-- Message Timeline -->
+		<div id="message-time-line">
+			<div id="content-message-timeline" class="boxs-timline">
+				<div class="header-box">
+					<span>Journal/Timeline view</span>
+				</div>
+				<div class="text-reference-command">Either scroll down or use your browser search function, normally &ltcommand&gt+F or &ltCtrl&gt+F, to search for Journal entries</div>
+				<div class="real-SrollBar">
+					<div id="box-main-timeline">
+						<div class="box-menu-message-timeline">
+							<div class="class-1 ont-1">Adventure</div>
+							<div class="class-1 ont-2">Members</div>
+							<div class="class-1 ont-3 padding-leftP">Web Page</div>
+							<div class="class-1 ont-4 padding-leftP">Message Threads</div>
+						</div>
+						<div class="main-scroll-timeline" style="height:445px">
+
+							<table>
+								<tr class="box-content-message-timeline">
+									<td class="ont-1 adventure-time border-right height-box"><span><a class="reload-tag-a" href="javascript:void(0)" ng-click="goToAdventure(adventure)">{{nameRsAv}}</a></span>
+									</td>
+
+									<td class="ont-2 friends-time  height-box">
+										<div class="xs-leader" ng-repeat="member in MemberMessageJounrnal" ng-click="goToCurrentPageMember(adventure,member)">
+											<div class="xs-1">
+												<div class="avatar-message image-main"></div>
+												<div class="avatar-user-message">
+
+													<span user-avatar uid="member.uid"></span>
+												</div>
+											</div>
+											<div class="xs-2 ng-isolate-scope" user-name uid="member.uid"></div>
+										</div>
+
+									</td>
+									<td class="message-thread-time">
+										<table ng-repeat="page in ResultAdventureJounrnal.pages" class="fisrt_table{{$index}}">
+											<tr>
+												<td class="ont-3tmp web-page-time border-right border-left height-box">
+													<a href="javascript:void(0)" ng-click="goToPage(adventure, page)">{{page.uri}}</a>
+												</td>
+												<td class="ont-4tmp message-thread-time height-box">
+													<div class="message-real-SrollBar real-SrollBar">
+														<ul>
+															<li class="you-message-real" ng-repeat="threadMessage in page.threadmessages" thread-message thread="threadMessage" page="page" adventure="idRsAv"></li>
+															
+															<li class="createNewMessageDevice">
+																
+																<div send-new-message page="page" adventure="current_adventure" class="" ng-show="page.threadmessages.length==0">
+																	<!--<input class="inputChat" page="page" send-new-message placeholder="Type a message here to create a new thread" type="text" />-->
+																	<!--<div class="fl">-->
+																		<!--<button ng-click="SendMessageFirstTime()" class="button-send"></button>-->
+																	<!--</div>-->
+																</div>
+															</li>
+														</ul>
+													</div>
+												</td>
+											</tr>
+										</table>
+									</td>
+
+								</tr>
+
+							</table>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

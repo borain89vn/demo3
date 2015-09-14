@@ -1,0 +1,76 @@
+<!--
+<div class="container animated fadeInDown">
+    <div class="text-center" style="margin:20% auto auto">
+        <img src='images/desktop/logo-large.png' />
+    </div>
+</div>
+-->
+<div >
+	<div >
+		<div id="mainLoginandRegis" class="hide-device">
+			<div class="loginPage containerToolbar">
+				<div class="image-main arrow-left"></div>
+				<div>
+					<div id="main-login" ng-controller="LoginController">
+						<div class="image-logo image-main" hammer-hold="holdOnLogo()"></div>
+						<div class="box-login">
+							<form id="form-box-login" autocomplete="off">
+								<div class="email-box fl">
+									<span class="text">Email</span>
+									<div class="box-input-email image-main">
+										<input type="email" name="email" ng-model="emailUser" required class="type-email-box" />
+									</div>
+								</div>
+								<div class="passw-box fl">
+									<span class="text">Password</span>
+									<div class="box-input-password image-main">
+										<input type="password" name="password" ng-model="passwordUser" required class="type-password-box" />
+									</div>
+								</div>
+								<div class="login-box fl">
+									<button ng-click="Login()" class="image-main"></button>
+								</div>
+								<div class="text-forget-password fl">
+									<div class="input_term_login">
+										<input ng-model="check_termn_login" type="checkbox" /><span>Accept <a href="javascript:void(0)" ng-click="boxHTML(true,'term_of_use')">Terms of Use</a></span>
+									</div>
+									<a ng-click="OpenBox('forgotPassword')" href="javascript:void(0)">Forgot password</a>
+								</div>
+							</form>
+						</div>
+						<div class="box-register fr">
+							<div id="form-box-register">
+								<a href="javascript:void(0)" ng-click="boxHTML(true,'register')" class="button-res image-main"></a>
+							</div>
+						</div>
+					</div>
+					<a href="javascript:void(0)" class="messageClass">
+						<div class="leftM image-main"></div>
+						<div class="contentMessage">
+							<div class="message-main" ng-model="message">
+								<div class="image-main ii"></div>
+								<div class="message"> </div>
+
+
+							</div>
+						</div>
+						<div class="leftR image-main"></div>
+					</a>
+				</div>
+				<div class="image-main arrow-right"></div>
+				
+
+			</div>
+
+		</div>
+
+		<div ng-include="'app/views/forgot-password.html'"></div>
+		<div id="ngIncludeBox" class="boxToolbar load-device" ng-include=boxR></div>
+		<div id="ngIncludeBox" class="boxToolbar load-device" ng-include=boxTerm></div>
+		<div class="HexseeApplication-devices">
+			<div ng-include="'app/views/device/show_alert.html'"></div>
+			<div ng-include="'app/views/device/device_login.html'"></div>
+		</div>
+		
+	</div>
+</div>

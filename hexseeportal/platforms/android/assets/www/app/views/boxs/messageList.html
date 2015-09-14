@@ -1,0 +1,45 @@
+<div id="box-new-message" class="boxs" style="display: none">
+    <div class="header-box">
+        <span>Journal</span>
+    </div>
+    <div class="box-message-child">
+        <div class="box-borders">
+            <div class="header-adbox">
+                <div class="box-f fl">Incoming</div>
+                <div class="box-detail fl">Go to Adventure</div>
+            </div>
+            <div class="scoll-box-ad" style="height:290px;">
+                <div class="table-listMessage">  <!--style="height:290px"-->
+<!--
+                    <tr>
+                       <td class="text-center load-message-empty" ng-hide="listMessage > 0 || listMessage == -1">Loading</td>-
+                      <td class="text-center load-message-empty" ng-hide="listMessage != -1">You haven't received message yet.</td>
+                    </tr>    
+-->
+                    <div class="div-boxxx" ng-repeat="message in receivedMessageList">
+                        <div class="contenx-adven" >
+                            <div class="relavei">
+                                <div class="avatar-message image-main"></div>
+                                    <div class="avatar-user-message">
+                                        <span user-avatar uid="message.author" width="45"></span>
+                                    </div>
+                                <div class="tex-center" ><a class="reload-tag-a set-width-433" href="javascript:void(0)" ng-click="goToAMessageAdventure(message,isLatform)">{{message.content}}</a></div>
+                                <div class="icon-repmessage image-main" ng-click="clickReply($index,message.threadmessage_id)"></div>
+                                <div class="div-float-none-reply" input-box-reply repliedmessage="message" id="messageReplyBox{{$index}}" style="display:none"></div>
+                                 
+							</div>
+                        </div>
+                        <div class="icon-adven"><a class="reload-tag-a" href="javascript:void(0)" ng-click="goToAMessageAdventure(message,isLatform)">{{message.adventure_name}}</a></div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <div class="bt-add-new-adven">
+            <a href="javascript:void(0)" class="image-main" ng-click="gotoTimeline()"></a>
+        </div>
+
+    </div>
+    <div class="tooltip-arrow image-main"></div>
+    <a href="javascript:void(0)" ng-click="boxHTML()" class="lose-button image-main"></a>
+</div>

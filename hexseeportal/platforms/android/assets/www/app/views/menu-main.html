@@ -1,0 +1,20 @@
+
+<div id="MainContainer">
+    <div class="hideWhenDevice" ng-repeat="notification in notifications_addedAdventure " notification-adventure notification="notification"></div>
+    <div ng-repeat="adventure in adventure_detail_list" adventure-detail adventure="adventure" class="boxAdventureDetail"></div>
+    <div ng-repeat="message_detail in messageDetail" message-detail message="message" class="boxMessageDetail"></div>
+</div>
+
+<div id="ngIncludeBox" class="boxToolbar" ng-include=boxR></div> 
+ <div ng-repeat="messageNotification in willReplyMessageNotification" uid="{{idUser}}" quick-reply-message-box notification="messageNotification" firstname="{{firstNUser}}" lastname="{{lastNUser}}"></div>
+<div ng-include="'app/views/logout.html'"></div>
+<div ng-include="'app/views/change-password.html'"></div>
+<div ng-include="'app/views/edit-profile.html'"></div>
+<div ng-include="'app/views/edit-avatar.html'"></div>
+
+			
+<div class="HexseeApplication-devices">
+	<div ng-include="'app/views/device/device_main_time.html'"></div>
+    <div ng-include="'app/views/device/show_alert.html'"></div>
+    <div ng-include="'app/views/device/device_main_menu.html'"></div>
+</div>

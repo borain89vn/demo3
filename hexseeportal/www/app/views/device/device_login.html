@@ -1,0 +1,49 @@
+<div id="main-login" ng-controller="LoginController">
+	<div class="menu-main container">
+		<div class="col-md-2 col-sm-2 col-xs-2 rml">
+			<a href="javascript:void(0)" data-toggle="modal" data-target="#loginBox" box-login-ctl>
+				<img id="login_main_not_login" src="images/logo_notlogin.png" />
+			</a>
+		</div>
+		<div class="col-md-10 col-sm-10 col-xs-10 rml">
+			<form id="form-login" name="myFormLogin" autocomplete="off">
+				<div class="clear">
+					<div class="col-xs-12 col-md-6 col-sm-6">
+						<div style="padding:0">
+							<div class="div-email">
+								<div class="f-log"></div>
+								<input placeholder="Email" ng-model="emailUser" name="input" id="email_login" type="email" required />
+								<div class="r-log"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6 col-sm-6">
+						<div style="padding:0">
+							<div class="div-email">
+								<div class="f-log l-pass"></div>
+								<input placeholder="Password" ng-model="passwordUser" id="password_login" type="password" required />
+								<div class="r-log"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box-process-btlog">
+					<div class="text-forget-password">
+						<div class="input_term_login text-right">
+							<input ng-model="check_termn_login" type="checkbox" class="ng-pristine ng-untouched ng-valid"><span class="col1" style="margin-right:6px;">
+                                Accept <a href="javascript:void(0)" ng-click="openEula()" class="col2">Terms of Use</a></span>
+							<a ng-click="OpenBox('forgotPassword')" href="javascript:void(0)" class="col3">Forgot password</a>
+						</div>
+
+					</div>
+				</div>
+				<div class="fr clear">
+						<button ng-click="Login()" class="sblogin text-center fl"><img src="images/btn-login.png" />
+						</button>
+						<div class="fl"><a ng-click="boxHTML(true,'register')" class="device-register text-center">New User</a>
+						</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

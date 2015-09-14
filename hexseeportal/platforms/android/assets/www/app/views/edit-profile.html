@@ -1,0 +1,26 @@
+<div id="EditYourName" class="boxs-two">
+    <div id="box-edit-your-name" class="popup">
+        <div class="header-box">
+            <span>Edit your name</span>
+        </div>
+        <form autocomplete="off" name="editNameForm">
+            <div class="box-s">
+                <div class="group-box">
+                    <div class="input-div image-main">
+                        <input class="firstname_edit" placeholder="First name" type="text" name="fistname_edit" ng-model="fistname_edit" ng-minlength="3" ng-maxlength="12" required/>
+                    </div>
+                    <div class="input-div image-main">
+                        <input class="lastname_edit" placeholder="Last name" type="text" name="lastname_edit" ng-model="lastname_edit" ng-minlength="3" ng-maxlength="12" required/>
+                    </div>
+                    <div class="error"></div>
+                </div>
+
+                <div class="part-button">
+                    <span ng-click="closebpopup()" class="cancel-button gray-button">Cancel</span>
+                    <button ng-click="eventEditName()" class="change-button blue-button">Save</button>
+                </div>
+            </div>
+        </form>
+        <a href="javascript:void(0)" ng-click="closebpopup()" class="lose-button image-main"></a>
+    </div>
+</div>
